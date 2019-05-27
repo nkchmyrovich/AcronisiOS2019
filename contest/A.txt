@@ -1,0 +1,17 @@
+func get_num_jewelleries(string: String, substring: String) -> Int {
+    var n = 0;
+    for char in substring {
+        for elem in string {
+            if (char == elem) {
+                n += 1;
+            }
+        }
+    }
+    return n;
+}
+
+let substring = String(readLine()!);
+let string = String(readLine()!);
+var set = Set(substring);
+let jewellery = String(set.sorted());
+print(get_num_jewelleries(string: string, substring: jewellery))

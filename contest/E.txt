@@ -1,0 +1,9 @@
+let str1 = String(readLine(strippingNewline: true)!);
+let str2 = String(readLine(strippingNewline: true)!);
+var list1 = [Character](str1);
+var list2 = [Character](str2);
+if (list1.sorted() == list2.sorted()) {
+    print(1);
+} else {
+    print(0);
+}

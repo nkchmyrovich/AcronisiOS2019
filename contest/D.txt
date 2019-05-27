@@ -1,0 +1,16 @@
+let n = Int(readLine(strippingNewline: true)!)!;
+
+func gen(n: Int, counter_open: Int, counter_close: Int, ans: String) {
+    if (counter_open + counter_close == 2 * n) {
+        print(ans);
+        return;
+    }
+    if (counter_open < n) {
+        gen(n: n, counter_open: counter_open + 1, counter_close: counter_close, ans: ans + "(");
+    }
+    if (counter_open > counter_close) {
+        gen(n: n, counter_open: counter_open, counter_close: counter_close + 1, ans: ans + ")");
+    }
+}
+
+gen(n: n, counter_open: 0, counter_close: 0, ans: "");
